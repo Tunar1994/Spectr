@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* NAV */
+nav{
+    display: flex;
+    background-color: #0069CA;
+    padding: 20px;
+    font-size: 18px;
+}
+
+nav div:first-child{
+    width: 10%;
+}
+nav div:nth-child(2){
+    width: 80%;
+}
+nav div:last-child{
+    width: 10%;
+}
+
+nav div:nth-child(2) ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav div:nth-child(2) ul a{
+    text-decoration: none;
+    color: white;
+}
+
+nav div:last-child a{
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: white;
+}
+nav div:last-child a{
+    color: #0069CA;
+    text-decoration: none;
+} 
+
+nav ul li i{
+    margin-left: 10px;
+    color: white;
+}
+
+/* DROPDOWN LANGUAGE */
+nav ul select{
+    background-color: #0069CA;
+    color: white;
+    border-color: #0069CA;
+}
+
+/* ABOUT */
+.team-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    height: 700px;
+}
+
+.team-about .about1{
+    display: flex;
+    width: 100%;
+}
+
+.team-about .about1 div{
+    width: 250px;
+    background-color: #549CDB;
+    margin-right: 30px;
+}
+.team-about .about1 div:nth-child(1){
+    height: 200px;
+}
+.team-about .about1 div:nth-child(2){
+    height: 170px;
+    align-self: flex-end;
+}
+.team-about .about1 div:nth-child(3){
+    height: 140px;
+    align-self: flex-end;
+}.team-about .about1 div:nth-child(4){
+    height: 110px;
+    align-self: flex-end;
+}
+
+.team-about .about2{
+    display: flex;
+    width: 100%;
+}
+
+.team-about .about2 div{
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 25px;
+}
+
+.about2 h3{
+    font-size: 26px;
+}
+
+.staff-title{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 100px;
+}
+
+.team-staff{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.team-staff .staff{
+    width: 250px;
+    height: 320px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+.staff section:first-child{
+    width: 100%;
+    height: 220px;
+    background-color: #0069CA;
+    border-bottom: 1px solid white;
+    border-radius: 20px;
+}
+
+.staff section:last-child{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+}

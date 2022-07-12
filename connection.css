@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
+}
+
+/* NAV */
+nav{
+    display: flex;
+    background-color: #0069CA;
+    padding: 20px;
+    font-size: 18px;
+}
+
+nav div:first-child{
+    width: 10%;
+}
+nav div:nth-child(2){
+    width: 80%;
+}
+nav div:last-child{
+    width: 10%;
+}
+
+nav div:nth-child(2) ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav div:nth-child(2) ul a{
+    text-decoration: none;
+    color: white;
+}
+
+nav div:last-child a{
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: white;
+}
+nav div:last-child a{
+    color: #0069CA;
+    text-decoration: none;
+} 
+
+nav ul li i{
+    margin-left: 10px;
+    color: white;
+}
+
+/* DROPDOWN LANGUAGE */
+nav ul select{
+  background-color: #0069CA;
+  color: white;
+  border-color: #0069CA;
+}
+
+/* ELAQE */
+.connection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .connection h1{
+    padding-bottom: 30px;
+  }
+  
+  .connection p{
+    padding-bottom: 50px;
+  }
+  
+  .connection-cards{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .connection-cards div{
+    width: 300px;
+    border-radius: 10px;
+    background-color: #0069CA;
+    padding-top: 30px;
+  }
+  
+  .connection-cards div i{
+    font-size: 40px;
+    color: white;
+  }
+  
+  .connection-cards div h5{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .connection-cards div p a{
+    color: white;
+  }
+  .connection-cards div p a:hover{
+    color: rgb(118, 6, 6);
+  }
+  
+  
+  
+  .registration{
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    background-color: #EDF1F7;
+    padding-bottom: 50px;
+  }
+  
+  .registration section{
+    width: 50%;
+  }
+  
+  .registration section:first-child ul{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px  ;
+  }
+  .registration section:first-child ul li{
+    margin: 10px;
+  }
+  .registration section:first-child h1{
+    text-align: center;
+  }
+  .registration section:first-child input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
+  .registration section:last-child{
+    display: flex;
+    flex-direction: column;
+  }
+  .registration section:last-child p{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 15px;
+  }
+  .registration textarea{
+    width: 70%;
+    margin: auto;
+  }
+  .registration button{
+    width: 100px;
+    margin: auto;
+    margin-top: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #0069CA;
+    color: white;
+    border: none;
+  }

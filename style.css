@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
+}
+
+/* NAV */
+nav{
+    display: flex;
+    background-color: #0069CA;
+    padding: 20px;
+    font-size: 18px;
+}
+
+nav div:first-child{
+    width: 10%;
+}
+nav div:nth-child(2){
+    width: 80%;
+}
+nav div:last-child{
+    width: 10%;
+}
+
+nav div:nth-child(2) ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav div:nth-child(2) ul a{
+    text-decoration: none;
+    color: white;
+}
+
+nav div:last-child a{
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: white;
+}
+nav div:last-child a{
+    color: #0069CA;
+    text-decoration: none;
+} 
+
+nav ul li i{
+    margin-left: 10px;
+    color: white;
+}
+
+/* DROPDOWN LANGUAGE */
+nav ul select{
+    background-color: #0069CA;
+    color: white;
+    border-color: #0069CA;
+}
+
+/* HEADER CAROUSEL */
+
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel {
+    height: 500px;
+    position: relative;
+    padding-top: 30%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #0069CA;
+  }
+  
+  .carousel__slide:nth-child(even) {
+    background-color: #99f;
+  }
+  
+  .carousel__snapper {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+  
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel__navigation-button {
+    margin-bottom: 30px;
+    opacity: .7;
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #fff;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+  .carousel__navigation-button:active{
+    border-color: white;
+  }
+
+  header ol::-webkit-scrollbar {
+    width: 0;
+  }
+  
+/* HEADER CONTENT */
+
+.carousel__snapper{
+  display: flex;
+}
+
+.carousel__snapper section{
+    width: 40%;
+    height: 300px;
+    margin: auto;
+}
+  
+        /* SLIDE 1 */
+
+#carousel__slide1 .carousel__snapper section:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#carousel__slide1 .carousel__snapper section:first-child h1{
+    font-size: 30px;
+    font-family: tahoma;
+    color: white;
+}
+#carousel__slide1 .carousel__snapper section:first-child p{
+  color: white;
+}
+#carousel__slide1 .carousel__snapper section:first-child a{
+  border: 1px solid white;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: white;
+  color: #0069CA;
+  width: 100px;
+  text-align: center;
+}
+
+#carousel__slide1 .carousel__snapper section:last-child img{
+  width: 100%;
+}
+
+
+/* SLIDE 2 */
+
+
+#carousel__slide2 .carousel__snapper section:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#carousel__slide2 .carousel__snapper section:first-child h1{
+    font-size: 30px;
+    font-family: tahoma;
+    color: white;
+}
+#carousel__slide2 .carousel__snapper section:first-child p{
+    color: white;
+}
+#carousel__slide2 .carousel__snapper section:first-child a{
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: white;
+    color: #0069CA;
+    width: 100px;
+    text-align: center;
+    }
+
+#carousel__slide2 .carousel__snapper section:last-child{
+    position: relative;
+}
+
+#carousel__slide2 .carousel__snapper section:last-child div{
+    width: 40%;
+    border: 1px solid white;
+    height: 180px;
+    border-radius: 10px;
+}
+
+#carousel__slide2 .carousel__snapper section:last-child div:nth-child(1){
+    position: absolute;
+    right: 0;
+}
+
+#carousel__slide2 .carousel__snapper section:last-child div:nth-child(3){
+    position: absolute;
+    bottom: 40px;
+    margin-left: 30%;
+    
+}
+
+
+/* ABOUT */
+.about{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about div:first-child h1{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about .about-content{
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.about .about-content section{
+  width: 50%;
+}
+
+.about .about-content section:first-child{
+  box-sizing: border-box;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+
+.about .about-content  section:first-child a{
+  border: 1px solid #0069CA;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: white;
+  color: #0069CA;
+  width: 100px;
+  text-align: center;
+}
+
+.about .about-content section:last-child{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-right: 100px;
+}
+
+.about .about-content section:last-child div{
+  width: 250px;
+  height: 150px;
+  background-color: #99f;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+
+/* SERVİCES */
+
+#services{
+    background-color: #EFF3FF;
+    padding-top: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+#services section:first-child h1{
+    text-align: center;
+}
+
+#services section:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+#services section:last-child .card{
+    background-color: white;
+    width: 350px;
+    height: 250px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgb(181, 181, 181);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+}
+
+#services section:last-child .card i{
+  font-size: 30px;
+  color: #0069CA;
+}
+
+#services section:last-child .card h3{
+  font-size: 25px;
+}
+
+/* ISLERIMIZ */
+main{
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+main section:first-child{
+width: 100%;
+}
+
+main section:first-child h1{
+  text-align: center;
+  font-family: tahoma;
+}
+
+main section:last-child{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+main section:last-child .card{
+  width: 400px;
+  height: 200px;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgb(181, 181, 181);
+}
+
+
+/* FOOTER */
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  background-color: #F4FAFC;
+}
+
+.footer-logo ul li{
+  margin-bottom: 15px;
+}
+.footer-logo ul li:last-child{
+  margin-top: 90px;
+}
+
+.footer-sosial ul li{
+  margin-bottom: 15px;
+}
+.footer-sosial ul li:first-child{
+  font-size: 25px;
+}
+.footer-sosial ul li a{
+  color: black;
+}
+
+.footer-company ul li{
+  margin-bottom: 15px;
+}
+.footer-company ul li:first-child{
+  font-size: 25px;
+}
+.footer-company ul li a{
+  color: black;
+}
+
+.footer-subscription h1{
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
